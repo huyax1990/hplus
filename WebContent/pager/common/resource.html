@@ -1,0 +1,64 @@
+<script type="text/javascript">
+var _basePath = '${base}';
+var _location = document.location;
+var _rootPath = _location.protocol + '//' + _location.hostname;
+	_rootPath+= _location.port == '' ? '' : ':' + _location.port;
+	_rootPath+= _basePath;
+window.rootPath = _rootPath;
+window.resVersion = '${v}';
+<% if(has(user)){ %>
+	window.user = {
+		nick:'${user.nick!}', 
+		id:'${user.id!}', 
+		username:'${user.username!}', 
+		email:'${user.email!}'
+	};
+<%	
+} %>
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta name="keywords"
+	content="Hu.后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+<meta name="description"
+	content="Hu.是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+
+<link href="${base}/assets/common/hplus/css/bootstrap.min.css?v=3.3.0" rel="stylesheet">
+<link href="${base}/assets/common/hplus/font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+
+<!-- Morris -->
+<link href="${base}/assets/common/hplus/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+<!-- Gritter -->
+<link href="${base}/assets/common/hplus/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+<link href="${base}/assets/common/hplus/css/animate.css" rel="stylesheet">
+<link href="${base}/assets/common/hplus/css/style.css?v=2.1.0" rel="stylesheet">
+
+<!-- Mainly scripts -->
+<script src="${base}/assets/common/hplus/js/jquery-2.1.1.min.js"></script>
+<script src="${base}/assets/common/hplus/js/bootstrap.min.js?v=3.3.0"></script>
+<script src="${base}/assets/common/hplus/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="${base}/assets/common/hplus/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="${base}/assets/common/hplus/js/hplus.js?v=2.0.0"></script>
+<script src="${base}/assets/common/hplus/js/plugins/pace/pace.min.js"></script>
+<script src="${base}/assets/common/hplus/js/validate/jquery.validate.min.js"></script>
+<script src="${base}/assets/common/hplus/js/form/jquery.form.js"></script>
+<script src="${base}/assets/common/hplus/js/validate/messages_zh.min.js"></script>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="${base}/assets/common/jquery-easyui-1.4.2/themes/bootstrap/easyui.css">
+<script type="text/javascript"
+	src="${base}/assets/common/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+
+<% if(has(cssPath)){ %>
+	<link type="text/css" rel="stylesheet" href="${base}/assets/${cssPath}${v}" />
+<% } 
+   if(has(jsPath)){ %>
+	<script type="text/javascript" src="${base}/assets/${jsPath}${v}"></script>
+<% } %>

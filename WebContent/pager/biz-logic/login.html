@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Hu. 后台主题UI框架 - 登陆</title>
+<% include("/pager/common/resource.html"){} %>
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">Hu.</h1>
+
+            </div>
+            <h3>欢迎使用 Hu.</h3>
+
+            <form id="loginForm" class="m-t" role="form" action="login.html">
+                <div class="form-group">
+                    <input type="username" name="username" id="username" class="form-control" placeholder="用户名" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="密码" required="">
+                </div>
+                <button type="submit" id="submit"  class="btn btn-primary block full-width m-b">登 录</button>
+
+
+                <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
+                </p>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
